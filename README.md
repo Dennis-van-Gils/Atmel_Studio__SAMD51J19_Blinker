@@ -18,7 +18,11 @@ MAIN CLOCK
 	- Enable DFLL48M being fed by GCLK_GEN3 and feed into GCLK_GEN0, which
 	  now operates at 48 MHz.
 	- Feed GCLK_GEN0 into the CPU clock.
-
+	
+	UPDATE:
+	There is an article at https://microchipsupport.force.com/s/article/SAM-D5x-E5x--Atmel-START-DPLL-configuration
+	describing how to configure the main clock for 120 MHz.
+	
 
 
 CODE OFFSET
