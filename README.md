@@ -20,7 +20,7 @@ MAIN CLOCK
 	- Feed GCLK_GEN0 into the CPU clock.
 	
 	UPDATE:
-	There is an article at https://microchipsupport.force.com/s/article/SAM-D5x-E5x--Atmel-START-DPLL-configuration
+	There is an article at <https://microchipsupport.force.com/s/article/SAM-D5x-E5x--Atmel-START-DPLL-configuration>
 	describing how to configure the main clock for 120 MHz.
 	
 
@@ -59,7 +59,7 @@ FLASHING SAMD51J19 CHIP
 		'.elf' and '.hex'.
 		
 		There is a Python3 script at:
-		https://github.com/microsoft/uf2/blob/master/utils/uf2conv.py
+		<https://github.com/microsoft/uf2/blob/master/utils/uf2conv.py>
 		that is able to transform the '.bin' file into a '.uf2' file, which can
 		be copied over to the FeatherBoot drive. Copying a .uf2 file to the
 		FeatherBoot drive will automatically flash the board and restart into
