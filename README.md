@@ -89,5 +89,7 @@ bossac -i -d --port=COM15 -U -i -e -w -v --offset=0x4000 SAMD51J19_Blinker.bin -
 More reads:
 -----------
 https://learn.adafruit.com/how-to-program-samd-bootloaders/programming-the-bootloader-with-atmel-studio
+
 https://learn.adafruit.com/adafruit-feather-m4-express-atsamd51/uf2-bootloader-details
+
 https://reprapdad.wordpress.com/2016/08/19/adafruit-feather-m0-with-atmel-studio/
