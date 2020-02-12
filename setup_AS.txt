@@ -1,0 +1,10 @@
+Setup in Atmel Studio for uploading to Adafuit M4 Feather (SAMD51J19)
+---------------------------------------------------------------------
+* The M4 boards have a 16kb bootloader at address 0. We must skip these first
+bytes when writing the program code. Writing starts at address 0x4000
+
+Properties -> Toolchain -> ARM/GNU Linker -> Miscellaneous
+Append the following to the Linker Flags:
+	-Wl,--section-start=.text=0x4000
+	
+	
