@@ -1,4 +1,5 @@
-Using Atmel Studio for working with SAMD51J19 (Adafruit Feather M4 Express)
+How to get set up in Atmel Studio for working with SAMD51J19
+(Adafruit Feather M4 Express)
 -------------------------------------------------------------------------------
 Dennis van Gils, 12-02-2020
 
