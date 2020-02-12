@@ -1,12 +1,7 @@
-How to get set up in Atmel Studio for working with SAMD51J19
-(Adafruit Feather M4 Express)
--------------------------------------------------------------------------------
-Dennis van Gils, 12-02-2020
+# How to get set up in Atmel Studio for working with SAMD51J19 (Adafruit Feather M4 Express)
 
 
-
-MAIN CLOCK
-----------
+## MAIN CLOCK
 	
 The main CPU clock (GCLK_MAIN) of the SAMD51J19 chip needs to be configured
 properly using Atmel Start. It might not run out-of-the-box when using the
@@ -26,8 +21,7 @@ describing how to configure the main clock for 120 MHz.
 	
 
 
-CODE OFFSET
------------
+## CODE OFFSET
 
 The Adafruit Feather M4 Express boards have a 16kb bootloader at address 0.
 We must skip these first bytes when writing the program code. Writing starts
@@ -35,12 +29,11 @@ at address 0x4000.
 
 Properties -> Toolchain -> ARM/GNU Linker -> Miscellaneous
 
-Append the following to the Linker Flags: ```-Wl,--section-start=.text=0x4000```
+Append the following to the Linker Flags: `-Wl,--section-start=.text=0x4000`
 
 	
 
-FLASHING SAMD51J19 CHIP
------------------------
+## FLASHING SAMD51J19 CHIP
 	
 I know of three possibilities:
 
@@ -67,9 +60,7 @@ FeatherBoot drive will automatically flash the board and restart into
 program run.
 
 Command:
-```
-python uf2conv.py -c -b 0x4000 -o SAMD51J19_Blinker.uf2 SAMD51J19_Blinker.bin
-```
+`python uf2conv.py -c -b 0x4000 -o SAMD51J19_Blinker.uf2 SAMD51J19_Blinker.bin`
 
 #### C) Compile to disk, use bossac
 
@@ -89,7 +80,5 @@ bossac -i -d --port=COM15 -U -i -e -w -v --offset=0x4000 SAMD51J19_Blinker.bin -
 More reads:
 -----------
 https://learn.adafruit.com/how-to-program-samd-bootloaders/programming-the-bootloader-with-atmel-studio
-
 https://learn.adafruit.com/adafruit-feather-m4-express-atsamd51/uf2-bootloader-details
-
 https://reprapdad.wordpress.com/2016/08/19/adafruit-feather-m0-with-atmel-studio/
